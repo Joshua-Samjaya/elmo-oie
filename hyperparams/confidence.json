@@ -1,14 +1,16 @@
 {"rnn":{
-  "sent_maxlen": 20,
+  "sent_maxlen": 200,
   "emb_dropout": 0.1,
-  "batch_size": 50,
-  "epochs": 100,
+  "batch_size": 20,
+  "epochs": 50,
   "seed": 42,
   "num_of_latent_layers": 3,
   "pred_dropout": 0.1,
   "trainable_emb": true,
   "hidden_units": 128,
   "sep": "\t",
-  "emb_filename": "../pretrained_word_embeddings/glove.6B.50d.txt"
+  "emb_filename": "../pretrained_word_embeddings/glove.6B.300d.txt",
+  "lr": 0.0001, 
+  "bert_model": "bert-large-uncased"
 }
 }
