@@ -9,6 +9,6 @@
   "trainable_emb": true,
   "hidden_units": 128,
   "sep": "\t",
-  "emb_filename": "../pretrained_word_embeddings/glove.6B.50d.txt"
+  "emb_filename": "/data/common/glove.6B/glove.6B.50d.txt"
 }
 }

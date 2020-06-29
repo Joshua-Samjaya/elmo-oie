@@ -238,7 +238,7 @@ class BERT_OIE(LightningModule):
                  epochs = 10, pred_dropout = 0.1, model_dir = "./models/",
                  classes = None, pos_tag_embedding_size = 5, num_classes=15, 
                  num_workers = 0, lr=0.001, **kwargs):
-        # NOTE: So far, num classes must be provided at the beginning
+        # NOTE: num classes must be provided at the beginning
         super(BERT_OIE, self).__init__()
         self.train_file = train_file
         self.dev_file = dev_file
@@ -248,12 +248,13 @@ class BERT_OIE(LightningModule):
         self.batch_size = batch_size
         self.seed = seed
         self.sep = sep
-        #TODO add bert
+        
         self.bert_model = bert_model
         self.bert = BertModel.from_pretrained(bert_model)
         self.tokenizer = BertTokenizer.from_pretrained(bert_model)
         self.hidden_units = self.bert.config.hidden_size
-        self.embedding_size = None
+        self.embedding_size = self.bert.config.hidden_size
+        
         self.trainable_emb = trainable_emb
         self.emb_dropout = emb_dropout
         self.num_of_latent_layers = num_of_latent_layers

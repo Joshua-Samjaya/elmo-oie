@@ -2,11 +2,10 @@
     load_pretrained_word_embeddings [--glove=GLOVE_FN]
 """
 
-from docopt import docopt
 import numpy as np
 from word_index import Word_index
 import logging
-logging.basicConfig(level = logging.DEBUG)
+logging.basicConfig(level = logging.INFO)
 import sys
 sys.path.append("./common")
 from symbols import UNK_INDEX, UNK_SYMBOL, UNK_VALUE
@@ -87,14 +86,3 @@ class Glove:
 
     def get_torch_embedding(self, **args):
         return nn.Embedding.from_pretrained(torch.Tensor(self.get_embedding_matrix()), **args)
-
-
-if __name__ == "__main__":
-    args = docopt(__doc__)
-    if args["--glove"] is not None:
-        glove_fn = args["--glove"]
-        g = Glove(glove_fn)
-        emb = g.get_keras_embedding()
-    else:
-        logging.info(__doc__)
-        exit
