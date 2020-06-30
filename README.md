@@ -7,15 +7,15 @@ This repository provides a reimplementation of [supervised-oie](https://github.c
 pip install requirements.txt
 ```
 
-2. Adjust hyperparemeters, e.g. `confidence.json`
+2. Create configuration file with hyperparemeters, e.g. `confidence.json`
 ```
 cd ./hyperparams
 vim confidence.json
 ```
 
 3. Train model on GPU with GloVe
-- download GloVe Embedding
-- Edit GloVe path in <configuration_file>.json
+- Download GloVe Embedding
+- Edit GloVe path in <confign_file>.json
 ```
 cd ./src
 python  train.py  --train=../data/train.oie.conll  --dev=../data/dev.oie.conll  --test=../data/test.oie.conll --load_hyperparams=../hyperparams/confidence.json --gpus 1
@@ -32,7 +32,7 @@ python  train.py  --train=../data/train.oie.conll  --dev=../data/dev.oie.conll  
 - Run the following code
 ```
 cd ./src
-python  train.py  --train=../data/train.oie.conll  --dev=../data/dev.oie.conll  --test=../data/test.oie.conll --load_hyperparams=<your-config.json> --gpus <num_gpus> --<other-flags>
+python  train.py  --train=../data/train.oie.conll  --dev=../data/dev.oie.conll  --test=../data/test.oie.conll --load_hyperparams=<config_file.json> --gpus <num_gpus> --<other-flags>
 ```
 
 ## Important files or folders
@@ -43,6 +43,13 @@ python  train.py  --train=../data/train.oie.conll  --dev=../data/dev.oie.conll  
 ./src/dataloader.py
 ./src/train.py
 ```
+
+## To contribute
+1. Please try to understand the important files or folders. 
+1. Please create another branch first, say "ELMo". Then edit and commit with your code in that branch. 
+2. Please create your own json file for hyperparameters. 
+3. Please create your own dataloader and model class. 
+2. Please try to separate your code with the existing as much as possible. 
 
 # Old README
 Refer to [supervised-oie](https://github.com/gabrielStanovsky/supervised-oie)
