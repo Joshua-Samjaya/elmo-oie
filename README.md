@@ -46,10 +46,14 @@ python  train.py  --train=../data/train.oie.conll  --dev=../data/dev.oie.conll  
 
 ## To contribute
 1. Please try to understand the important files or folders. 
-1. Please create another branch first, say "ELMo". Then edit and commit with your code in that branch. 
-2. Please create your own json file for hyperparameters. 
-3. Please create your own dataloader and model class. 
-2. Please try to separate your code with the existing as much as possible. 
+2. Please create another branch first, say "ELMo". Then edit and commit with your code in that branch. A sample "elmo" branch has been created, you may do:
+```
+git checkout elmo
+git status
+```
+3. Please create your own json file under `./hyperparams`. 
+4. Please create your own dataloader and model class under `./src`. 
+5. Please try to separate your code with the existing as much as possible. 
 
 # Old README
 Refer to [supervised-oie](https://github.com/gabrielStanovsky/supervised-oie)
