@@ -1,7 +1,7 @@
 {"rnn":{
-  "sent_maxlen": 200,
+  "sent_maxlen": 300,
   "emb_dropout": 0.1,
-  "batch_size": 20,
+  "batch_size": 50,
   "epochs": 50,
   "seed": 42,
   "num_of_latent_layers": 3,
@@ -11,6 +11,6 @@
   "sep": "\t",
   "emb_filename": "/data/common/glove.6B/glove.6B.50d.txt",
   "lr": 0.0001, 
-  "bert_model": "bert-large-uncased"
+  "bert_model": "bert-base-uncased"
 }
 }
