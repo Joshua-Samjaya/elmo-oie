@@ -1,0 +1,18 @@
+{
+  "rnn": {
+    "sent_maxlen": 300,
+    "emb_dropout": 0.1,
+    "batch_size": 64,
+    "epochs": 6,
+    "seed": 42,
+    "num_of_latent_layers": 3,
+    "pred_dropout": 0.1,
+    "trainable_emb": false,
+    "hidden_units": 128,
+    "sep": "\t",
+    "emb_filename": "glove.6B.50d.txt",
+    "lr": 0.001,
+    "elmo_options": "https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x4096_512_2048cnn_2xhighway/elmo_2x4096_512_2048cnn_2xhighway_options.json",
+    "elmo_weights": "https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x4096_512_2048cnn_2xhighway/elmo_2x4096_512_2048cnn_2xhighway_weights.hdf5"
+  }
+}
