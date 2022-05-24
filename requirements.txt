@@ -9,4 +9,4 @@ scipy
 spacy
 torch
 torchvision
-tensorflow==1.2.0
+tensorflow==2.6.4
